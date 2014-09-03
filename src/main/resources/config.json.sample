@@ -1,0 +1,7 @@
+{
+  "weixin":{
+    "templateMessageId":"SU5mIWGfhdeO9BMzNbnpeCnXg_i7lZOcFx5QsMhBI1M",
+    "appId":"your app id",
+    "appSecret":"your app secret"
+  }
+}
