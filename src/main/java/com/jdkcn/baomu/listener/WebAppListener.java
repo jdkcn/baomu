@@ -27,7 +27,7 @@ public class WebAppListener extends GuiceServletContextListener {
              */
             @Override
             protected void configureServlets() {
-                serve("/").with(DashboardServlet.class);
+                serve("/dashboard").with(DashboardServlet.class);
             }
         });
     }
