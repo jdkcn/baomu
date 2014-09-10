@@ -7,6 +7,7 @@ import com.google.inject.Injector;
 import com.google.inject.servlet.GuiceServletContextListener;
 import com.google.inject.servlet.ServletModule;
 import com.jdkcn.baomu.BaomuGuiceModule;
+import com.jdkcn.baomu.servlet.DashboardServlet;
 
 /**
  * 
@@ -20,12 +21,13 @@ public class WebAppListener extends GuiceServletContextListener {
      */
     @Override
     protected Injector getInjector() {
-        return Guice.createInjector(new BaomuGuiceModule(), new ServletModule(){
+        return Guice.createInjector(new BaomuGuiceModule(), new ServletModule() {
             /**
              * {@inheritDoc}
              */
             @Override
             protected void configureServlets() {
+                serve("/").with(DashboardServlet.class);
             }
         });
     }
