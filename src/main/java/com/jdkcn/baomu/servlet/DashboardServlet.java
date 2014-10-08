@@ -25,6 +25,6 @@ public class DashboardServlet extends HttpServlet {
      */
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("<html><body><h1>Baomu</h1></body></html>");
+        req.getRequestDispatcher("/views/dashboard.jsp").forward(req, resp);
     }
 }
